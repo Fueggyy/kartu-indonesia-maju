@@ -3,6 +3,13 @@
         <img src="{{asset('AdminLTE/dist')}}/img/tommy.jpg" class="img-circle elevation-2" alt="User Image">
     </div>
     <div class="info">
-        <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+        <a href="#" >{{ Auth::user()->name }}</a>
+        <span>
+            @if (Auth::user()->roles_id == 1)
+            <h6> <b>Admin</b> </h6>
+            @else
+            <h6> <b>Guest</b> </h6>
+            @endif
+        </span>
     </div>
 </div>

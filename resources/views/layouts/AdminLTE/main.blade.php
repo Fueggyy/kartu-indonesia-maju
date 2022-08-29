@@ -73,7 +73,11 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Dashboard</h1>
+              @if (Auth::user()->roles_id == 1)
+              <h1 class="m-0">Welcome, <b>Admin</b> </h1>
+              @else
+              <h1 class="m-0">Welcome, <b>Guest</b> </h1>
+              @endif
             </div><!-- /.col -->
             <div class="col-sm-6">
             </div><!-- /.col -->
